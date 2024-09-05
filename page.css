@@ -1,0 +1,146 @@
+*{
+  padding: 0;
+  margin: 0;
+}
+
+
+@media only screen and (max-width: 480px){
+
+
+  main{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  body{
+    background: linear-gradient(to right, rgba(255, 105, 180, 0.7), rgba(105, 210, 255, 0.7));
+  }
+
+  .birthday{
+    margin-top: 30px;
+    background: linear-gradient(to right, rgba(96, 96, 96, 0.7), rgba(255, 56, 69, 0.7));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: moveLeftWithStatic 3s linear infinite;
+  }
+
+  .wishes{
+    font-size: 13px;
+    margin-top: 40px;
+    text-align: justify;
+    margin-left: 18px;
+    margin-right: 18px;
+    line-height: 18px;
+    animation: fadeIn 3s ease-in forwards;
+  }
+
+  .line{
+    margin-top: -33px;
+    margin-left: 3px;
+    margin-right: 3px;
+    margin-bottom: 3px;
+    animation: moveLeftWithStatic 3s linear;
+  }
+
+  .bal{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 20px;
+  }
+
+  .baloon1{
+    position: absolute;
+    width: 150px;
+    bottom: -300px;
+    animation: rise 3s ease-in-out infinite;
+    animation-delay: 2s;
+  }
+
+  .baloon2{
+    position: absolute;
+    width: 150px;
+    margin-left: 200px;
+    bottom: -300px;
+    animation: rise 3s ease-in-out infinite;
+    animation-delay: 2s;
+  }
+
+  .audio{
+    opacity: 1;
+    position: relative;
+    top: -100px;
+  }  
+
+  @keyframes rise {
+    0% {
+      opacity: 0;
+        top: 100vh;
+    }
+    100% {
+        top: -200px;
+    }
+  }
+
+  @keyframes moveLeftWithStatic {
+    0% {
+        right: -100px;
+        opacity: 0;
+        transform: translateY(0);
+    }
+    10% {
+        right: 10vw;
+        transform: translateY(3px);
+    }
+    20% {
+        right: 20vw;
+        transform: translateY(-5px);
+    }
+    30% {
+        right: 30vw;
+        transform: translateY(4px);
+    }
+    40% {
+        right: 40vw;
+        transform: translateY(-3px);
+    }
+    50% {
+        right: 50vw;
+        transform: translateY(0);
+    }
+    60% {
+        right: 60vw;
+        transform: translateY(-4px);
+    }
+    70% {
+        right: 70vw;
+        transform: translateY(5px);
+    }
+    80% {
+        right: 80vw;
+        transform: translateY(-6px);
+    }
+    90% {
+        right: 90vw;
+        transform: translateY(4px);
+    }
+    100% {
+        right: 100vw;
+        transform: translateY(0);
+    }
+  }
+
+
+  @keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+}
+

@@ -1,0 +1,175 @@
+*{
+  padding: 0;
+  margin: 0;
+}
+
+
+@media only screen and (max-width: 480px){
+
+
+.audio{
+  opacity: 1;
+  position: relative;
+  top: -100px;
+}
+
+  main{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .name{
+    font-family: fantasy;
+    margin-top: -10px;
+    font-size: 20px;
+    background: linear-gradient(to right, rgba(255, 105, 180, 0.7), rgba(105, 210, 255, 0.7));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: moveRightToLeft 5s linear;
+  }
+
+  .background{
+    width: 300px;
+    margin-left: 40px;
+    margin-top: 15px;
+    position: relative;
+    animation: moveRight 3s ease-in-out;
+  }
+
+  .Hassan{
+    position: absolute;
+    width: 200px;
+    border-radius: 100px;
+    top: 120px;
+    left: 85px;
+    filter: drop-shadow(0 0 10px rgba(255, 105, 180, 0.7));
+    animation: fall 3s ease-in-out;
+  }
+
+  .birthday{
+    width: 250px;
+    margin-top: 40px;
+    margin-left: 70px;
+    filter: drop-shadow(0 0 10px rgba(105, 210, 255, 0.7));
+    animation: moveLeftWithStatic 3s linear;
+  }
+
+  .birth{
+    width: 100px;
+    margin-top: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    border-radius: 4px;
+    border-style: none;
+    background: linear-gradient(to right, rgba(255, 105, 180, 0.7), rgba(105, 210, 255, 0.7));
+    cursor: pointer;
+    animation: moveLeftWithStatic 3s linear infinite;
+  }
+
+  .birth:hover{
+    opacity: 0.7;
+  }
+
+  .baloon{
+    position: absolute;
+    width: 150px;
+    bottom: -300px;
+    animation: rise 3s ease-in-out;
+    animation-delay: 2s;
+  }
+
+
+  @keyframes fall {
+    0% {
+      opacity: 0;
+        top: -100px;
+    }
+    100% {
+        top: 15vh;
+    }
+}
+
+
+@keyframes rise {
+  0% {
+    opacity: 0;
+      top: 100vh;
+  }
+  100% {
+      top: -200px;
+  }
+}
+
+@keyframes moveRight {
+  0% {
+    opacity: 0;
+      left: -100vh;
+  }
+  100% {
+      left: 0vw;
+  }
+}
+
+@keyframes moveLeftWithStatic {
+  0% {
+      right: -100px;
+      opacity: 0;
+      transform: translateY(0);
+  }
+  10% {
+      right: 10vw;
+      transform: translateY(3px);
+  }
+  20% {
+      right: 20vw;
+      transform: translateY(-5px);
+  }
+  30% {
+      right: 30vw;
+      transform: translateY(4px);
+  }
+  40% {
+      right: 40vw;
+      transform: translateY(-3px);
+  }
+  50% {
+      right: 50vw;
+      transform: translateY(0);
+  }
+  60% {
+      right: 60vw;
+      transform: translateY(-4px);
+  }
+  70% {
+      right: 70vw;
+      transform: translateY(5px);
+  }
+  80% {
+      right: 80vw;
+      transform: translateY(-6px);
+  }
+  90% {
+      right: 90vw;
+      transform: translateY(4px);
+  }
+  100% {
+      right: 100vw;
+      transform: translateY(0);
+  }
+}
+
+@keyframes moveRightToLeft {
+  0% {
+    opacity: 0;
+      transform: translateX(100%);
+  }
+  100% {
+      transform: translateX(0%);
+  }
+}
+
+}
+
